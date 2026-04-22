@@ -1,4 +1,6 @@
 # Expense Tracker
+🔗 Live Demo:
+- Frontend: https://sde-assessment-app-owpopjvzbj5tr2zrr2skhx.streamlit.app/
 
 > A production-ready personal finance app that tracks where your money goes—even when your network doesn't cooperate.
 
@@ -27,9 +29,8 @@ streamlit run frontend/app.py
 ```
 
 ### 3. Open & Use
-- Frontend: http://localhost:8501
-- Backend API: http://localhost:8000
-
+- Frontend: https://sde-assessment-app-owpopjvzbj5tr2zrr2skhx.streamlit.app/
+- Backend API: https://sde-assessment-app-production.up.railway.app
 Done! Start adding expenses.
 
 ---
@@ -73,7 +74,7 @@ sde-assessment-app/
 
 **Request:**
 ```bash
-curl -X POST http://localhost:8000/expenses \
+curl -X POST https://sde-assessment-app-production.up.railway.app/expenses \
   -H "Content-Type: application/json" \
   -d '{
     "amount": 50.99,
@@ -111,17 +112,17 @@ curl http://localhost:8000/expenses
 
 **Filter by category:**
 ```bash
-curl "http://localhost:8000/expenses?category=Food"
+curl "http://sde-assessment-app-production.up.railway.app/expenses?category=Food"
 ```
 
 **Sort by date (newest first):**
 ```bash
-curl "http://localhost:8000/expenses?sort=date_desc"
+curl "http://sde-assessment-app-production.up.railway.app/expenses?sort=date_desc"
 ```
 
 **Filter AND sort:**
 ```bash
-curl "http://localhost:8000/expenses?category=Food&sort=date_desc"
+curl "http://sde-assessment-app-production.up.railway.app/expenses?category=Food&sort=date_desc"
 ```
 
 **Response:**
@@ -309,11 +310,9 @@ We focused on what matters for a personal finance tool: being correct, reliable,
 | Start backend | `uvicorn backend.main:app --reload` |
 | Start frontend | `streamlit run frontend/app.py` |
 | Reset data | `rm expenses.db` |
-| View backend | http://localhost:8000 |
-| View frontend | http://localhost:8501 |
-| List all expenses | `curl http://localhost:8000/expenses` |
-| Filter by Food | `curl "http://localhost:8000/expenses?category=Food"` |
-| Sort by date | `curl "http://localhost:8000/expenses?sort=date_desc"` |
+| List all expenses | `curl http://sde-assessment-app-production.up.railway.app/expenses` |
+| Filter by Food | `curl "http://sde-assessment-app-production.up.railway.app/expenses?category=Food"` |
+| Sort by date | `curl "http://sde-assessment-app-production.up.railway.app/expenses?sort=date_desc"` |
 
 ---
 
