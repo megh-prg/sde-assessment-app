@@ -1,0 +1,7 @@
+[server]
+headless = true
+port = ${PORT}
+enableXsrfProtection = false
+
+[client]
+showErrorDetails = true
