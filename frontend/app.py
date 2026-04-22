@@ -5,7 +5,8 @@ import pandas as pd
 from datetime import date as dt_date, timedelta
 import os
 
-API = os.getenv("API_URL", "http://localhost:8000")
+# API = os.getenv("API_URL", "https://sde-assessment-app-production.up.railway.app")
+API = "https://sde-assessment-app-production.up.railway.app"
 
 st.set_page_config(page_title="Expense Tracker", page_icon="💰", layout="wide")
 
